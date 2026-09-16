@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title>ViCare Circulation</title>
+  <rect width="512" height="512" rx="96" fill="#ed1c24"/>
+  <path d="M118 126h82l56 164 56-164h82L286 386h-60L118 126z" fill="#fff"/>
+  <path d="M141 404h230" stroke="#fff" stroke-width="20" stroke-linecap="round"/>
+</svg>
