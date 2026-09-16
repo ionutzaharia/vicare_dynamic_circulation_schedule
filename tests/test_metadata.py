@@ -12,8 +12,9 @@ def test_manifest_is_hacs_compatible() -> None:
     manifest = json.loads((INTEGRATION / "manifest.json").read_text())
     assert manifest["domain"] == "vicare_circulation"
     assert manifest["config_flow"] is True
-    assert manifest["version"] == "1.0.1"
+    assert manifest["version"] == "1.0.2"
     assert "application_credentials" in manifest["dependencies"]
+    assert (INTEGRATION / "brand" / "icon.png").is_file()
 
 
 def test_strings_and_translations_have_matching_sections() -> None:
