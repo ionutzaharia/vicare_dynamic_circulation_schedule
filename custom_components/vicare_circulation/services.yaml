@@ -1,0 +1,55 @@
+set_circulation_schedule:
+  name: Set circulation schedule
+  description: Replace the DHW circulation pump weekly schedule.
+  target:
+    entity:
+      integration: vicare_circulation
+  fields:
+    mon:
+      name: Monday
+      description: Monday schedule entries.
+      example:
+        - start: "08:00"
+          end: "17:00"
+          mode: "on"
+        - start: "17:30"
+          end: "17:40"
+          mode: "on"
+      selector:
+        object:
+
+    tue:
+      name: Tuesday
+      description: Tuesday schedule entries.
+      selector:
+        object:
+
+    wed:
+      name: Wednesday
+      description: Wednesday schedule entries.
+      selector:
+        object:
+
+    thu:
+      name: Thursday
+      description: Thursday schedule entries.
+      selector:
+        object:
+
+    fri:
+      name: Friday
+      description: Friday schedule entries.
+      selector:
+        object:
+
+    sat:
+      name: Saturday
+      description: Saturday schedule entries.
+      selector:
+        object:
+
+    sun:
+      name: Sunday
+      description: Sunday schedule entries.
+      selector:
+        object:
