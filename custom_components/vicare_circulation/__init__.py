@@ -29,8 +29,14 @@ from .const import (
 from .coordinator import ViCareCirculationCoordinator
 from .models import Target
 
+from .services import async_setup_services
+
 type ViCareCirculationConfigEntry = ConfigEntry[ViCareCirculationCoordinator]
 
+async def async_setup(hass: HomeAssistant, config: dict) -> bool:
+    """Set up ViCare Circulation services."""
+    await async_setup_services(hass)
+    return True
 
 async def async_setup_entry(
     hass: HomeAssistant, entry: ViCareCirculationConfigEntry
