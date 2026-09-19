@@ -74,14 +74,10 @@ async def async_setup_services(hass: HomeAssistant) -> None:
             )
 
         schedule: Schedule = {}
-
+        
         for day in DAYS:
-            entries = call.data.get(day)
-
-            if entries is None:
-                # Omitted days are deliberately left unchanged by this service.
-                continue
-
+            entries = call.data.get(day, [])
+        
             schedule[day] = [
                 {
                     "start": item["start"],
